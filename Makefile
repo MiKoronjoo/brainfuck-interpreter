@@ -1,8 +1,8 @@
 bfi: bfi.o
-    gcc bfi.o -o bfi
+	gcc bfi.o -o bfi
 
 bfi.o:
-    gcc -c bfi.c
+	gcc -c bfi.c
 
 clean:
-    rm *.o bfi
+	rm *.o bfi
