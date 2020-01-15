@@ -10,6 +10,7 @@ int main(int argc, char *argv[]) {
     FILE *fp;
     fp = fopen(argv[1], "r");
     while((code[k++] = fgetc(fp)) != EOF);
+    fclose(fp);
     for(ip = 0; code[ip]; ip++) {
         switch(code[ip]) {
             case '>':
@@ -41,6 +42,5 @@ int main(int argc, char *argv[]) {
                 break;
         }
     }
-    fclose(fp);
     return 0;
 }
