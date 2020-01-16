@@ -32,6 +32,10 @@ int main(int argc, char *argv[]) {
                 *ptr = getchar();
                 break;
             case '[':
+                if(!*ptr) {
+                    while(code[++ip] != ']');
+                    break;
+                }
                  ret_addr[j++] = ip;
                  break;
             case ']':
